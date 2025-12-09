@@ -32,7 +32,9 @@
         /* --- HERO SECTION --- */
         header {
             text-align: center;
-            /* Padding handled inline in body */
+            /* Applying the final determined spacing via CSS */
+            padding-top: 50px; 
+            padding-bottom: 40px; 
         }
 
         .logo {
@@ -69,7 +71,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 40px; /* Distinct gap to separate the two concepts */
+            gap: 40px; 
             margin-bottom: 60px;
         }
 
@@ -181,9 +183,10 @@
             border-bottom-color: #1a1a1a;
         }
 
+        /* --- FOOTER --- */
         footer {
             text-align: center;
-            padding: 60px 20px;
+            padding: 60px 0;
             border-top: 1px solid rgba(0,0,0,0.06);
             color: #999;
             font-size: 0.85rem;
@@ -200,12 +203,18 @@
             .container { padding: 0 20px; }
             .grid { gap: 40px; }
             .button-group { gap: 40px; }
+            
+            /* Setting mobile padding */
+            header { 
+                padding-top: 40px; 
+                padding-bottom: 40px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header class="container" style="padding-top: 50px; padding-bottom: 40px;">
+    <header class="container">
         <span class="logo">Support Playlists</span>
         <h1>The Missing Infrastructure for Human Distress.</h1>
         <p class="sub-hero">
@@ -230,7 +239,7 @@
                     View White-Label Solutions
                 </a>
                 <p class="path-subtext">
-                    The invisible engine. Deploy our autonomous triage and navigation protocols <span class="highlight">inside your own platform</span> (White Label), fully invisible to the patient.
+                    The invisible engine. Deploy our autonomous <span class="highlight">demand sorting</span> and navigation protocols inside your own platform (White Label), fully invisible to the patient.
                 </p>
             </div>
 
