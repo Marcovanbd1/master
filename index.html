@@ -23,6 +23,7 @@
             width: 90%;
             max-width: 900px;
             text-align: center;
+            padding-bottom: 50px; /* Add breathing room at bottom */
         }
 
         /* --- HEADER --- */
@@ -100,6 +101,31 @@
         .trust-hook p {
             font-size: 0.95em;
             line-height: 1.6;
+        }
+
+        /* --- MOBILE OPTIMIZATION (Essential for LinkedIn Traffic) --- */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2em; /* Prevents headline taking up whole screen */
+            }
+            .split-buttons {
+                flex-direction: column; /* Stack buttons vertically */
+                gap: 15px;
+            }
+            .split-buttons a {
+                display: block; /* Make buttons full width */
+                width: 100%;
+                box-sizing: border-box; /* Ensures padding doesn't break width */
+                padding: 18px 20px; /* Taller touch target */
+                text-align: center;
+            }
+            .trust-section {
+                flex-direction: column; /* Stack the 3 trust hooks */
+                gap: 30px;
+            }
+            .container {
+                width: 88%; /* Prevents text hitting edge of phone screen */
+            }
         }
     </style>
 </head>
