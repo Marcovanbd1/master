@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology & Governance | Support Playlists</title>
+    <style>
+        /* --- GLOBAL STYLES --- */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f5;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+            color: #1a1a1a;
+            margin-top: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #388e8e;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 650px;
+        }
+
+        /* --- TECHNICAL SECTIONS --- */
+        .tech-section {
+            background-color: #ffffff;
+            padding: 40px;
+            border-left: 4px solid #388e8e; /* Accent Border */
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .tech-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .tech-section p {
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        /* --- LISTS --- */
+        .tech-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tech-list li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tech-list li:before {
+            content: "•";
+            color: #388e8e;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- HIGHLIGHT BOX --- */
+        .highlight-box {
+            background-color: #e8e8e4;
+            padding: 20px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace; /* Tech feel */
+            font-size: 0.9em;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #e0e0e0;
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a href="index.html">← Back to Manifesto</a>
+        </nav>
+
+        <section class="hero">
+            <h1>The Engine of Trust.</h1>
+            <p>We believe that privacy is the prerequisite for honesty. Our architecture is designed to protect the user and the institution by adhering to a strict Zero-Data standard.</p>
+        </section>
+
+        <section class="tech-section">
+            <h2>1. Zero-Data Architecture</h2>
+            <p>Most health apps trade service for data. We do not. Our system is built on a "No-Account, No-Tracking" architecture that renders the user completely invisible to us.</p>
+            <ul class="tech-list">
+                <li><strong>No PII Collection:</strong> We do not request names, emails, IP addresses, or NHS numbers.</li>
+                <li><strong>Ephemeral Sessions:</strong> The user's interaction exists only for the duration of the session. Once the browser is closed, the personal context vanishes.</li>
+                <li><strong>Client-Side Privacy:</strong> Emotional input is processed to generate the playlist, but the raw text is never stored in a persistent user profile.</li>
+            </ul>
+            <div class="highlight-box">
+                PROTOCOL: [Input] -> [ANCI Translation] -> [Playlist Output] -> [Session Wipe]
+            </div>
+        </section>
+
+        <section class="tech-section">
+            <h2>2. ANCI (Autonomous Non-Clinical Intelligence)</h2>
+            <p>Our core engine is not a chatbot and it does not "hallucinate." It is a specialized translation layer designed to map unstructured distress to structured support paths.</p>
+            <ul class="tech-list">
+                <li><strong>Translation, Not Diagnosis:</strong> ANCI identifies themes (e.g., "financial worry," "sleep loss") but never assigns a clinical diagnostic label.</li>
+                <li><strong>The Safety Deflection Loop:</strong> If ANCI detects specific high-risk keywords (e.g., immediate self-harm), it triggers a hard-coded safety override, directing the user to emergency services immediately.</li>
+            </ul>
+        </section>
+
+        <section class="tech-section">
+            <h2>3. DSI (Demand Shaping Intelligence)</h2>
+            <p>While we protect the individual, we empower the system. DSI is the aggregate, anonymous output of the platform.</p>
+            <p>By stripping away identity, we are left with pure signal. We aggregate broad themes (e.g., "30% increase in housing anxiety in Region X") to provide institutions with a "Civic Radar" for resource allocation.</p>
+        </section>
+
+        <footer>
+            <p>Built for the "Quiet Middle." Validated for the Enterprise.</p>
+            <p>© Support Playlists Infrastructure.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
