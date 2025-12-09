@@ -31,9 +31,8 @@
 
         /* --- HERO SECTION --- */
         header {
-            /* DESKTOP GAP: 130px (Balanced) */
-            padding: 130px 0 60px; 
             text-align: center;
+            /* Padding is handled inline in the HTML below to guarantee it works */
         }
 
         .logo {
@@ -71,8 +70,7 @@
             flex-direction: column;
             align-items: center;
             gap: 16px;
-            /* Keeps the features close to the buttons */
-            margin-bottom: 50px; 
+            margin-bottom: 40px; /* Reduced gap to bring sections higher */
         }
 
         .btn {
@@ -110,7 +108,7 @@
 
         /* --- FEATURES GRID --- */
         .features {
-            padding: 80px 0;
+            padding: 60px 0;
             border-top: 1px solid rgba(0,0,0,0.06);
         }
 
@@ -169,14 +167,13 @@
             .container { padding: 0 20px; }
             .grid { gap: 40px; }
             
-            /* MOBILE GAP: 80px (Stays compact on phones) */
-            header { padding: 80px 0 40px; }
+            /* Since we are using inline styles below, we don't need to force padding here */
         }
     </style>
 </head>
 <body>
 
-    <header class="container">
+    <header class="container" style="padding-top: 50px; padding-bottom: 40px;">
         <span class="logo">Support Playlists</span>
         <h1>The Missing Infrastructure for Human Distress.</h1>
         <p class="sub-hero">
