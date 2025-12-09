@@ -12,10 +12,9 @@
     </script>
 
     <style>
-        /* Reset */
-        body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; box-sizing: border-box; }
+        /* --- RESET & BASICS --- */
+        body, h1, h2, h3, p, a { margin: 0; padding: 0; box-sizing: border-box; }
         
-        /* Global Look */
         body {
             background-color: #F7F5F0; /* Warm Paper */
             color: #1a1a1a;
@@ -29,9 +28,30 @@
             padding: 0 20px;
         }
 
-        /* Hero / Header */
+        /* --- TOP NAVIGATION (NEW) --- */
+        .top-nav {
+            padding: 20px 0;
+            text-align: right; /* Puts links to the right */
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .top-nav a {
+            text-decoration: none;
+            color: #3A5A5C;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-left: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav a:hover {
+            color: #D4A373; /* Gold hover effect */
+        }
+
+        /* --- HERO --- */
         header {
-            padding: 80px 0 60px;
+            padding: 60px 0 60px;
             text-align: center;
         }
 
@@ -61,7 +81,7 @@
             margin: 0 auto 50px;
         }
 
-        /* Buttons */
+        /* --- BUTTONS --- */
         .button-group {
             display: flex;
             flex-direction: column;
@@ -81,7 +101,7 @@
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: all 0.2s;
         }
 
         .btn-primary {
@@ -101,7 +121,7 @@
             opacity: 0.9;
         }
 
-        /* Features Grid */
+        /* --- FEATURES --- */
         .features {
             padding: 60px 0;
             border-top: 1px solid #ddd;
@@ -117,39 +137,27 @@
             font-family: "Georgia", serif;
             font-size: 1.4rem;
             margin-bottom: 15px;
-            color: #1a1a1a;
         }
 
-        /* Footer & Links */
+        /* --- FOOTER --- */
         footer {
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             border-top: 1px solid #eee;
-            margin-top: 40px;
-        }
-
-        .footer-nav {
-            margin-bottom: 20px;
-        }
-
-        .footer-nav a {
-            color: #3A5A5C;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-        }
-
-        .footer-nav a:hover {
-            text-decoration: underline;
-        }
-        
-        .copyright {
-            font-size: 0.9rem;
             color: #888;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+
+    <div class="container">
+        <nav class="top-nav">
+            <a href="technology.html">Governance</a>
+            <a href="vision.html">Manifesto</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 
     <header class="container">
         <span class="logo">Support Playlists</span>
@@ -195,12 +203,7 @@
     </section>
 
     <footer>
-        <div class="footer-nav">
-            <a href="technology.html">Governance Protocol</a> 
-            <a href="vision.html">Our Manifesto</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <p class="copyright">© 2025 Support Playlists. The Infrastructure for Emotional Health.</p>
+        <p>© 2025 Support Playlists. The Infrastructure for Emotional Health.</p>
     </footer>
 
 </body>
