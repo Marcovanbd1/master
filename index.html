@@ -18,7 +18,7 @@
         body {
             background-color: #F7F5F0; /* Warm Paper */
             color: #1a1a1a;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
         }
 
@@ -28,9 +28,9 @@
             padding: 0 20px;
         }
 
-        /* --- HERO & HEADER --- */
+        /* --- HERO SECTION --- */
         header {
-            padding: 60px 0 40px;
+            padding: 80px 0 60px;
             text-align: center;
         }
 
@@ -41,7 +41,7 @@
             font-size: 0.9rem;
             color: #3A5A5C;
             display: block;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -49,7 +49,7 @@
             font-size: 3rem;
             font-weight: 400;
             line-height: 1.1;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #1a1a1a;
         }
 
@@ -57,32 +57,7 @@
             font-size: 1.25rem;
             color: #555;
             max-width: 650px;
-            margin: 0 auto 30px;
-        }
-
-        /* --- CENTRAL NAVIGATION LINKS (The "Missing" Links) --- */
-        .center-nav {
-            margin-bottom: 40px;
-            padding: 15px;
-            background-color: rgba(58, 90, 92, 0.05); /* Light green tint */
-            border-radius: 8px;
-            display: inline-block;
-        }
-
-        .center-nav a {
-            text-decoration: none;
-            color: #3A5A5C;
-            font-weight: 700;
-            font-size: 0.95rem;
-            margin: 0 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-bottom: 2px solid transparent;
-        }
-
-        .center-nav a:hover {
-            border-bottom: 2px solid #3A5A5C;
-            color: #1a1a1a;
+            margin: 0 auto 50px;
         }
 
         /* --- BUTTONS --- */
@@ -104,8 +79,8 @@
             border-radius: 4px;
             font-size: 1.1rem;
             font-weight: 600;
-            transition: all 0.2s;
             cursor: pointer;
+            transition: transform 0.2s;
         }
 
         .btn-primary {
@@ -122,13 +97,13 @@
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            opacity: 0.9;
         }
 
-        /* --- FEATURES --- */
+        /* --- FEATURES GRID --- */
         .features {
             padding: 60px 0;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         .grid {
@@ -144,14 +119,35 @@
             color: #1a1a1a;
         }
 
+        .feature-item p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* --- THE LINKS YOU REQUESTED --- */
+        .text-link {
+            color: #3A5A5C;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #3A5A5C;
+        }
+        
+        .text-link:hover {
+            color: #D4A373;
+            border-bottom-color: #D4A373;
+        }
+
         /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 60px 20px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid rgba(0,0,0,0.05);
             color: #888;
-            margin-top: 40px;
+            font-size: 0.9rem;
         }
+        
+        footer a { color: #888; text-decoration: none; margin-left: 10px;}
     </style>
 </head>
 <body>
@@ -162,14 +158,7 @@
         <p class="sub-hero">
             We built the "Quiet Middle"—the autonomous layer between wellness apps and clinical crisis, governed by absolute trust.
         </p>
-
-        <div class="center-nav">
-            <a href="technology.html">Governance</a>
-            <span style="color:#ccc;">|</span>
-            <a href="vision.html">Manifesto</a>
-            <span style="color:#ccc;">|</span>
-            <a href="contact.html">Contact</a>
-        </div>
+        
         <div class="button-group">
             <a href="mood.html" class="btn btn-primary">
                 I Need Support Now
@@ -182,12 +171,14 @@
 
     <section class="features">
         <div class="container grid">
+            
             <div class="feature-item">
                 <h3>Infinite Scale. Zero Data.</h3>
                 <p>
                     Clinical capacity is finite. Human distress is infinite. 
                     Our <strong>ANCI</strong> engine handles millions of messy human problems simultaneously—without a login, without a waiting list, and without a clinician.
                 </p>
+                <a href="technology.html" class="text-link">Read the Governance Protocol &rarr;</a>
             </div>
             
             <div class="feature-item">
@@ -202,12 +193,14 @@
                 <p>
                     We turn private distress into public wisdom. Our system generates anonymous, aggregate data on population stress drivers (housing, debt, loneliness), allowing systems to heal upstream.
                 </p>
+                <a href="vision.html" class="text-link">Read our Manifesto &rarr;</a>
             </div>
+
         </div>
     </section>
 
     <footer>
-        <p>© 2025 Support Playlists. The Infrastructure for Emotional Health.</p>
+        <p>© 2025 Support Playlists. The Infrastructure for Emotional Health. <a href="contact.html">Contact Us</a></p>
     </footer>
 
 </body>
