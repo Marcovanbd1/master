@@ -12,7 +12,7 @@
     </script>
 
     <style>
-        /* RESET */
+        /* --- RESET --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
@@ -28,31 +28,9 @@
             padding: 0 20px;
         }
 
-        /* --- TOP NAVIGATION --- */
-        .top-nav {
-            padding: 20px 0;
-            text-align: right; /* Links align to the right */
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .top-nav a {
-            text-decoration: none;
-            color: #3A5A5C; /* Clinical Slate */
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-left: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .top-nav a:hover {
-            color: #1a1a1a;
-            text-decoration: underline;
-        }
-
-        /* --- HERO --- */
+        /* --- HERO & HEADER --- */
         header {
-            padding: 80px 0 60px;
+            padding: 60px 0 40px;
             text-align: center;
         }
 
@@ -63,26 +41,48 @@
             font-size: 0.9rem;
             color: #3A5A5C;
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         h1 {
-            font-family: "Georgia", "Times New Roman", serif;
+            font-family: "Georgia", serif;
             font-size: 3rem;
             font-weight: 400;
             line-height: 1.1;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: #1a1a1a;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .sub-hero {
             font-size: 1.25rem;
             color: #555;
             max-width: 650px;
-            margin: 0 auto 50px;
+            margin: 0 auto 30px;
+        }
+
+        /* --- CENTRAL NAVIGATION LINKS (The "Missing" Links) --- */
+        .center-nav {
+            margin-bottom: 40px;
+            padding: 15px;
+            background-color: rgba(58, 90, 92, 0.05); /* Light green tint */
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .center-nav a {
+            text-decoration: none;
+            color: #3A5A5C;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid transparent;
+        }
+
+        .center-nav a:hover {
+            border-bottom: 2px solid #3A5A5C;
+            color: #1a1a1a;
         }
 
         /* --- BUTTONS --- */
@@ -104,8 +104,8 @@
             border-radius: 4px;
             font-size: 1.1rem;
             font-weight: 600;
-            cursor: pointer;
             transition: all 0.2s;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -122,14 +122,13 @@
 
         .btn:hover {
             transform: translateY(-2px);
-            opacity: 0.9;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         /* --- FEATURES --- */
         .features {
             padding: 60px 0;
-            border-top: 1px solid rgba(0,0,0,0.1);
+            border-top: 1px solid #ddd;
         }
 
         .grid {
@@ -144,30 +143,18 @@
             margin-bottom: 15px;
             color: #1a1a1a;
         }
-        
-        .feature-item p {
-            color: #555;
-        }
 
         /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 60px 20px;
-            border-top: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid #eee;
             color: #888;
-            font-size: 0.9rem;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <nav class="top-nav">
-            <a href="technology.html">Governance Protocol</a>
-            <a href="vision.html">Our Manifesto</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
 
     <header class="container">
         <span class="logo">Support Playlists</span>
@@ -175,7 +162,14 @@
         <p class="sub-hero">
             We built the "Quiet Middle"—the autonomous layer between wellness apps and clinical crisis, governed by absolute trust.
         </p>
-        
+
+        <div class="center-nav">
+            <a href="technology.html">Governance</a>
+            <span style="color:#ccc;">|</span>
+            <a href="vision.html">Manifesto</a>
+            <span style="color:#ccc;">|</span>
+            <a href="contact.html">Contact</a>
+        </div>
         <div class="button-group">
             <a href="mood.html" class="btn btn-primary">
                 I Need Support Now
