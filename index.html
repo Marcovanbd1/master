@@ -32,7 +32,7 @@
         /* --- HERO SECTION --- */
         header {
             text-align: center;
-            /* Padding is handled inline in the HTML below to guarantee it works */
+            /* Padding handled inline in body */
         }
 
         .logo {
@@ -64,13 +64,31 @@
             line-height: 1.6;
         }
 
-        /* --- BUTTONS --- */
+        /* --- THE TWO PATHS --- */
         .button-group {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
-            margin-bottom: 40px; /* Reduced gap to bring sections higher */
+            gap: 40px; /* Distinct gap to separate the two concepts */
+            margin-bottom: 60px;
+        }
+
+        .path-container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .path-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #888;
+            margin-bottom: 8px;
+            font-weight: 700;
+            margin-left: 4px;
         }
 
         .btn {
@@ -78,37 +96,54 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            max-width: 360px;
-            height: 56px;
+            height: 60px;
             text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.05rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
+        /* MOOD: The Consumer "Playground" */
         .btn-primary {
             background-color: #3A5A5C;
             color: white;
             border: 1px solid #3A5A5C;
-            box-shadow: 0 4px 6px rgba(58, 90, 92, 0.2);
+            box-shadow: 0 4px 12px rgba(58, 90, 92, 0.25);
         }
 
+        /* SOLUTIONS: The B2B "Infrastructure" */
         .btn-secondary {
-            background-color: transparent;
+            background-color: white;
             color: #1a1a1a;
-            border: 1px solid #ccc;
+            border: 2px solid #e5e5e5;
         }
 
         .btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        /* --- THE SUBTEXT (Where the strategy lives) --- */
+        .path-subtext {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 12px;
+            margin-left: 4px;
+            line-height: 1.5;
+            max-width: 95%;
+        }
+
+        /* Helper class to make bold text in subtext stand out */
+        .highlight {
+            font-weight: 600;
+            color: #1a1a1a;
         }
 
         /* --- FEATURES GRID --- */
         .features {
-            padding: 60px 0;
+            padding: 80px 0;
             border-top: 1px solid rgba(0,0,0,0.06);
         }
 
@@ -146,7 +181,6 @@
             border-bottom-color: #1a1a1a;
         }
 
-        /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 60px 20px;
@@ -161,13 +195,11 @@
             margin-left: 10px;
         }
 
-        /* Mobile Optimization */
         @media (max-width: 600px) {
             h1 { font-size: 2.4rem; }
             .container { padding: 0 20px; }
             .grid { gap: 40px; }
-            
-            /* Since we are using inline styles below, we don't need to force padding here */
+            .button-group { gap: 40px; }
         }
     </style>
 </head>
@@ -181,12 +213,27 @@
         </p>
         
         <div class="button-group">
-            <a href="mood.html" class="btn btn-primary">
-                I Need Support Now
-            </a>
-            <a href="solutions.html" class="btn btn-secondary">
-                I Need a Solution for My Organization
-            </a>
+            
+            <div class="path-container">
+                <span class="path-label">THE CONSUMER LAB</span>
+                <a href="mood.html" class="btn btn-primary">
+                    Launch "Mood" Beta
+                </a>
+                <p class="path-subtext">
+                    Our direct-to-consumer sandbox. This is where we use <span class="highlight">messy, human language</span> and social curation to reach people outside the clinic.
+                </p>
+            </div>
+
+            <div class="path-container">
+                <span class="path-label">ENTERPRISE INFRASTRUCTURE</span>
+                <a href="solutions.html" class="btn btn-secondary">
+                    View White-Label Solutions
+                </a>
+                <p class="path-subtext">
+                    The invisible engine. Deploy our autonomous triage and navigation protocols <span class="highlight">inside your own platform</span> (White Label), fully invisible to the patient.
+                </p>
+            </div>
+
         </div>
     </header>
 
