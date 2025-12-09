@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology & Governance Protocol | Support Playlists</title>
-    <meta name="description" content="The technical framework behind ANCI, DSI, and our Zero-Data architecture.">
+    <title>Governance Protocol | Technical Framework</title>
 
     <script async src="https://plausible.io/js/pa-gq9_yqStULJ33tNHqrCVk.js"></script>
     <script>
@@ -13,11 +12,11 @@
     </script>
 
     <style>
-        /* --- RESET & BASE --- */
+        /* --- General Styling (Consistent across sub-pages) --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: #F7F5F0; /* Warm Paper */
+            background-color: #F7F5F0;
             color: #1a1a1a;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -25,186 +24,188 @@
         }
 
         .container {
-            max-width: 700px; /* Narrower for technical readability */
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* --- NAVIGATION --- */
-        .top-nav {
-            padding: 24px 0;
-            margin-bottom: 40px;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+        /* --- Navigation & Header --- */
+        .nav-bar {
+            padding: 40px 0 20px;
         }
 
         .back-link {
-            text-decoration: none;
-            color: #3A5A5C;
-            font-weight: 600;
             font-size: 0.9rem;
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
             transition: color 0.2s;
         }
-
+        
         .back-link:hover {
             color: #1a1a1a;
-            text-decoration: underline;
         }
 
-        /* --- HEADER --- */
         header {
-            padding: 40px 0 60px;
+            padding-bottom: 40px;
         }
 
         h1 {
-            font-family: "Georgia", serif;
-            font-size: 2.8rem;
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 3rem;
             font-weight: 400;
             line-height: 1.1;
             margin-bottom: 24px;
             color: #1a1a1a;
-            letter-spacing: -0.02em;
         }
-
-        .lead {
-            font-size: 1.25rem;
+        
+        .intro-p {
+            font-size: 1.2rem;
             color: #555;
             margin-bottom: 40px;
-            border-left: 3px solid #D4A373; /* Data Gold */
-            padding-left: 20px;
-            font-style: italic;
+            max-width: 90%;
         }
 
-        /* --- TECHNICAL SECTIONS --- */
-        .tech-section {
-            margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-        }
-
-        .tech-section:last-child {
-            border-bottom: none;
-        }
-
-        .tech-section h2 {
-            font-family: "Georgia", serif;
-            font-size: 1.8rem;
-            color: #3A5A5C; /* Clinical Slate */
-            margin-bottom: 20px;
-        }
-
-        .tech-section p {
-            margin-bottom: 20px;
-            color: #333;
-            font-size: 1.05rem;
-        }
-
-        /* --- LISTS --- */
-        ul {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        li {
-            font-size: 1.05rem;
-            margin-bottom: 16px;
-            padding-left: 24px;
-            position: relative;
-            color: #444;
-        }
-
-        li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #D4A373; /* Gold bullets */
-            font-weight: bold;
-            font-size: 1.2rem;
-            line-height: 1;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
+        /* --- Section Styling --- */
+        .section {
             padding: 40px 0;
-            color: #999;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(0,0,0,0.06);
-            margin-top: 40px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+        
+        .section h2 {
+            font-family: "Georgia", serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: #3A5A5C;
         }
 
-        /* Mobile */
+        .section-item {
+            margin-bottom: 30px;
+        }
+
+        .section-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .section-item p {
+            color: #444;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .section-item strong {
+            font-weight: 700;
+            color: #3A5A5C;
+        }
+
+        .section-item ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .section-item ul li {
+            padding-left: 1.2em;
+            text-indent: -1.2em;
+            margin-bottom: 0.5em;
+            color: #555;
+        }
+
+        .section-item ul li:before {
+            content: "•";
+            color: #3A5A5C;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.2em;
+            margin-left: -1.2em;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: left;
+            padding: 60px 0;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            color: #999;
+            font-size: 0.85rem;
+        }
+
         @media (max-width: 600px) {
             h1 { font-size: 2.2rem; }
-            .container { padding: 0 20px; }
+            .section h2 { font-size: 1.6rem; }
+            .section-item p { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <nav class="top-nav">
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
-        </nav>
+    <div class="container nav-bar">
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
 
+    <div class="container">
         <header>
             <h1>The Governance Protocol.</h1>
-            <p class="lead">
-                This document outlines the ethical and technical framework that underpins Support Playlists, ensuring safety, privacy, and actionable insight at scale.
-            </p>
+            <p class="intro-p">This document outlines the ethical and technical framework that underpins Support Playlists, ensuring safety, privacy, and actionable insight at scale.</p>
         </header>
 
-        <section class="tech-section">
+        <section class="section">
             <h2>1. Zero-Data Architecture</h2>
-            <p>
-                Our core commitment is to remove all data liability for our partners (NHS, Enterprise) and all privacy risk for the citizen.
-            </p>
-            <ul>
-                <li><strong>No Logins/Accounts:</strong> The user is anonymous by design.</li>
-                <li><strong>Ephemeral Input:</strong> All natural language input is processed instantly and deleted immediately after the Support Playlist is generated. Nothing is stored.</li>
-                <li><strong>No Tracking:</strong> We operate without cookies, session tracking, or IP logging.</li>
-                <li><strong>GDPR Shield:</strong> By eliminating Personally Identifiable Information (PII) collection, we eliminate GDPR compliance risk related to user data.</li>
-            </ul>
+            <p style="font-style: italic;">Our core commitment is to remove all data liability for our **White Label Partners** (NHS, Enterprise) and all privacy risk for the citizen.</p>
+            
+            <div class="section-item">
+                <ul>
+                    <li><strong>No Logins/Accounts:</strong> The user is anonymous by design.</li>
+                    <li><strong>Ephemeral Input:</strong> All natural language input is processed instantly and deleted immediately after the Support Playlist is generated. Nothing is stored.</li>
+                    <li><strong>No Tracking:</strong> We operate without cookies, session tracking, or IP logging.</li>
+                    <li><strong>GDPR Shield:</strong> By eliminating Personally Identifiable Information (PII) collection, we eliminate GDPR compliance risk related to user data.</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="tech-section">
+        <section class="section">
             <h2>2. ANCI: Autonomous Non-Clinical Intelligence</h2>
-            <p>
-                ANCI is the proprietary language model that translates unstructured emotional text into structured, actionable support steps.
-            </p>
-            <ul>
-                <li><strong>Non-Diagnostic:</strong> The model is trained <em>only</em> to identify needs (housing, debt, social support, self-care) and never to diagnose clinical conditions.</li>
-                <li><strong>Clinical Safety:</strong> This non-diagnostic focus de-risks deployment. We operate entirely outside the clinical safety burden of AI as a Medical Device (AIaMD).</li>
-                <li><strong>Peer-Validation:</strong> ANCI’s output is trained and constantly refined against a library of peer-validated support pathways.</li>
-            </ul>
+            <p>ANCI is the proprietary language model that translates unstructured emotional text into structured, actionable support steps.</p>
+            
+            <div class="section-item">
+                <ul>
+                    <li><strong>Non-Diagnostic:</strong> The model is trained **only** to identify needs (housing, debt, social support, self-care) and never to diagnose clinical conditions.</li>
+                    <li><strong>Clinical Safety:</strong> This non-diagnostic focus de-risks deployment. We operate entirely outside the clinical safety burden of AI as a Medical Device (AIaMD).</li>
+                    <li><strong>Peer-Validation:</strong> ANCI’s output is trained and constantly refined against a library of peer-validated support pathways.</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="tech-section">
+        <section class="section">
             <h2>3. DSI: Demand Shaping Intelligence</h2>
-            <p>
-                DSI is the aggregated, anonymized data stream that provides system-level insight. This is the only information our infrastructure retains.
-            </p>
-            <ul>
-                <li><strong>Anonymous Aggregation:</strong> We aggregate sentiment (e.g., "high volume of anxiety mentioning housing debt") and time stamps. No user inputs or identities are retained.</li>
-                <li><strong>Civic Radar:</strong> This data acts as an early warning system, allowing ICS leaders to commission resources proactively based on real-time population need.</li>
-            </ul>
+            <p>DSI is the aggregated, anonymized data stream that provides system-level insight. This is the only information our infrastructure retains.</p>
+            
+            <div class="section-item">
+                <ul>
+                    <li><strong>Anonymous Aggregation:</strong> We aggregate sentiment (e.g., "high volume of anxiety mentioning housing debt") and time stamps. No user inputs or identities are retained.</li>
+                    <li><strong>Civic Radar:</strong> This data acts as an early warning system, allowing ICS leaders to commission resources proactively based on real-time population need.</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="tech-section">
+        <section class="section">
             <h2>4. Clinical and Ethical Oversight</h2>
-            <p>
-                To maintain trust and technical rigor, our platform is subject to continuous review.
-            </p>
-            <ul>
-                <li><strong>Clinical Red Team:</strong> External clinical advisors constantly test the model output to ensure safety and prevent therapeutic drift.</li>
-                <li><strong>Regulatory Alignment:</strong> Deployment follows the highest standards of the NHS Code of Conduct for Data and the principles of DCB0129 (Clinical Risk Management Standard).</li>
-            </ul>
+            <p>To maintain trust and technical rigor, our platform is subject to continuous review.</p>
+            
+            <div class="section-item">
+                <ul>
+                    <li><strong>Clinical Red Team:</strong> External clinical advisors constantly test the model output to ensure safety and prevent therapeutic drift.</li>
+                    <li><strong>Regulatory Alignment:</strong> Deployment follows the highest standards of the NHS Code of Conduct for Data and the principles of **DCB0129** (Clinical Risk Management Standard).</li>
+                </ul>
+            </div>
         </section>
 
         <footer>
             <p>© 2025 Support Playlists. The Infrastructure for Emotional Health.</p>
         </footer>
-
     </div>
-
 </body>
 </html>
