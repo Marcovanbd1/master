@@ -3,209 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Governance Protocol | Technical Framework</title>
-
-    <script async src="https://plausible.io/js/pa-gq9_yqStULJ33tNHqrCVk.js"></script>
-    <script>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
-    </script>
+    <title>Technology & Governance | Mood</title>
 
     <style>
-        /* --- General Styling (Consistent across sub-pages) --- */
+        /* --- RESET & BASE (Matching Master Site) --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             background-color: #F7F5F0;
             color: #1a1a1a;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            padding: 40px 20px;
         }
-
         .container {
-            max-width: 800px;
+            max-width: 700px; 
             margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* --- Navigation & Header --- */
-        .nav-bar {
-            padding: 40px 0 20px;
-        }
-
-        .back-link {
-            font-size: 0.9rem;
-            color: #555;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
         }
         
-        .back-link:hover {
-            color: #1a1a1a;
-        }
-
-        header {
-            padding-bottom: 40px;
-        }
-
+        /* --- TYPOGRAPHY --- */
         h1 {
             font-family: "Georgia", "Times New Roman", serif;
-            font-size: 3rem;
-            font-weight: 400;
-            line-height: 1.1;
-            margin-bottom: 24px;
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: #3A5A5C;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+        strong {
             color: #1a1a1a;
         }
         
-        .intro-p {
-            font-size: 1.2rem;
+        .intro {
+            font-size: 1.1rem;
             color: #555;
             margin-bottom: 40px;
-            max-width: 90%;
+            border-left: 3px solid #3A5A5C;
+            padding-left: 20px;
         }
 
-        /* --- Section Styling --- */
-        .section {
-            padding: 40px 0;
-            border-top: 1px solid rgba(0,0,0,0.08);
-        }
-        
-        .section h2 {
-            font-family: "Georgia", serif;
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 16px;
-            color: #3A5A5C;
-        }
-
-        .section-item {
-            margin-bottom: 30px;
-        }
-
-        .section-item h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #1a1a1a;
-        }
-        
-        .section-item p {
-            color: #444;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        
-        .section-item strong {
-            font-weight: 700;
-            color: #3A5A5C;
-        }
-
-        .section-item ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 15px;
-        }
-
-        .section-item ul li {
-            padding-left: 1.2em;
-            text-indent: -1.2em;
-            margin-bottom: 0.5em;
-            color: #555;
-        }
-
-        .section-item ul li:before {
-            content: "•";
-            color: #3A5A5C;
-            font-weight: bold;
+        /* --- NAVIGATION --- */
+        .nav-link {
             display: inline-block;
-            width: 1.2em;
-            margin-left: -1.2em;
+            margin-bottom: 40px;
+            text-decoration: none;
+            color: #888;
+            font-size: 0.9rem;
         }
+        .nav-link:hover { color: #1a1a1a; }
 
-        /* --- Footer --- */
+        /* --- FOOTER --- */
         footer {
-            text-align: left;
-            padding: 60px 0;
-            border-top: 1px solid rgba(0,0,0,0.06);
-            color: #999;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            .section h2 { font-size: 1.6rem; }
-            .section-item p { font-size: 1rem; }
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.8rem;
+            color: #888;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <div class="container nav-bar">
-        <a href="index.html" class="back-link">← Back to Home</a>
-    </div>
-
     <div class="container">
-        <header>
-            <h1>The Governance Protocol.</h1>
-            <p class="intro-p">This document outlines the ethical and technical framework that underpins Support Playlists, ensuring safety, privacy, and actionable insight at scale.</p>
-        </header>
+        <a href="index.html" class="nav-link">← Back to Mood</a>
 
-        <section class="section">
-            <h2>1. Zero-Data Architecture</h2>
-            <p style="font-style: italic;">Our core commitment is to remove all data liability for our **White Label Partners** (NHS, Enterprise) and all privacy risk for the citizen.</p>
-            
-            <div class="section-item">
-                <ul>
-                    <li><strong>No Logins/Accounts:</strong> The user is anonymous by design.</li>
-                    <li><strong>Ephemeral Input:</strong> All natural language input is processed instantly and deleted immediately after the Support Playlist is generated. Nothing is stored.</li>
-                    <li><strong>No Tracking:</strong> We operate without cookies, session tracking, or IP logging.</li>
-                    <li><strong>GDPR Shield:</strong> By eliminating Personally Identifiable Information (PII) collection, we eliminate GDPR compliance risk related to user data.</li>
-                </ul>
-            </div>
-        </section>
+        <h1>The Governance Protocol</h1>
+        <p class="intro">
+            This document outlines the ethical and technical framework that underpins <strong>Mood</strong>, ensuring safety, privacy, and actionable insight at scale.
+        </p>
 
-        <section class="section">
-            <h2>2. ANCI: Autonomous Non-Clinical Intelligence</h2>
-            <p>ANCI is the proprietary language model that translates unstructured emotional text into structured, actionable support steps.</p>
-            
-            <div class="section-item">
-                <ul>
-                    <li><strong>Non-Diagnostic:</strong> The model is trained **only** to identify needs (housing, debt, social support, self-care) and never to diagnose clinical conditions.</li>
-                    <li><strong>Clinical Safety:</strong> This non-diagnostic focus de-risks deployment. We operate entirely outside the clinical safety burden of AI as a Medical Device (AIaMD).</li>
-                    <li><strong>Peer-Validation:</strong> ANCI’s output is trained and constantly refined against a library of peer-validated support pathways.</li>
-                </ul>
-            </div>
-        </section>
+        <h2>1. Zero-Data Architecture</h2>
+        <p>Our core commitment is to remove all data liability for our <strong>Integration Partners</strong> (Rapid Health, NHS, Enterprise) and all privacy risk for the user.</p>
+        
+        <p><strong>No Logins/Accounts:</strong> The user is anonymous by design.</p>
+        <p><strong>Ephemeral Input:</strong> All natural language input is processed instantly and deleted immediately after the Playlist is generated. Nothing is stored.</p>
+        <p><strong>No Tracking:</strong> We operate without cookies, session tracking, or IP logging.</p>
+        <p><strong>GDPR Shield:</strong> By eliminating Personally Identifiable Information (PII) collection, we remove the primary compliance risks associated with user data storage.</p>
 
-        <section class="section">
-            <h2>3. DSI: Demand Shaping Intelligence</h2>
-            <p>DSI is the aggregated, anonymized data stream that provides system-level insight. This is the only information our infrastructure retains.</p>
-            
-            <div class="section-item">
-                <ul>
-                    <li><strong>Anonymous Aggregation:</strong> We aggregate sentiment (e.g., "high volume of anxiety mentioning housing debt") and time stamps. No user inputs or identities are retained.</li>
-                    <li><strong>Civic Radar:</strong> This data acts as an early warning system, allowing ICS leaders to commission resources proactively based on real-time population need.</li>
-                </ul>
-            </div>
-        </section>
+        <h2>2. ANCI: Autonomous Non-Clinical Intelligence</h2>
+        <p>ANCI is the proprietary logic engine that translates unstructured emotional text into structured, actionable navigational steps.</p>
 
-        <section class="section">
-            <h2>4. Clinical and Ethical Oversight</h2>
-            <p>To maintain trust and technical rigor, our platform is subject to continuous review.</p>
-            
-            <div class="section-item">
-                <ul>
-                    <li><strong>Clinical Red Team:</strong> External clinical advisors constantly test the model output to ensure safety and prevent therapeutic drift.</li>
-                    <li><strong>Regulatory Alignment:</strong> Deployment follows the highest standards of the NHS Code of Conduct for Data and the principles of **DCB0129** (Clinical Risk Management Standard).</li>
-                </ul>
-            </div>
-        </section>
+        <p><strong>Navigation, Not Diagnosis:</strong> The model is trained <strong>only</strong> to identify needs (housing, debt, social support, self-care) and never to diagnose clinical conditions.</p>
+        <p><strong>Operational Safety:</strong> This focus de-risks deployment. We operate strictly as an intelligent routing layer, removing the regulatory burden associated with AI as a Medical Device (AIaMD).</p>
+        <p><strong>Peer-Validation:</strong> ANCI’s routing logic is trained and refined against a library of peer-validated support pathways.</p>
+
+        <h2>3. DSI: Demand Shaping Intelligence</h2>
+        <p>DSI is the aggregated, anonymized data stream that provides system-level insight. This is the only information our infrastructure retains.</p>
+
+        <p><strong>Anonymous Aggregation:</strong> We aggregate sentiment (e.g., "high volume of anxiety mentioning housing debt") and time stamps. No user inputs or identities are retained.</p>
+        <p><strong>Civic Radar:</strong> This data acts as an early warning system, allowing leaders to commission resources proactively based on real-time population stress signals.</p>
+
+        <h2>4. Oversight & Scope</h2>
+        <p>To maintain trust and technical rigor, our platform is subject to continuous review.</p>
+
+        <p><strong>Safety Review:</strong> External advisors constantly test the model output to ensure safe routing and prevent navigational drift.</p>
+        <p><strong>Regulatory Alignment:</strong> Mood is an <strong>intelligent navigation utility</strong>, not a medical device. We do not diagnose, treat, or prescribe. We align with the highest standards of Data Ethics and Safe Routing to ensure that non-clinical demand is resolved effectively while clinical needs are clearly signposted.</p>
 
         <footer>
-            <p>© 2025 Support Playlists. The Infrastructure for Emotional Health.</p>
+            <p>© 2025 Mood by Support Playlists. The Infrastructure for Emotional Flow.</p>
         </footer>
     </div>
+
 </body>
 </html>
