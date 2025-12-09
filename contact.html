@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Partnerships | Support Playlists</title>
-    <meta name="description" content="Dedicated contact channels for Enterprise, Sales, Partnerships, and Media inquiries.">
+    <title>Contact Us | Partnerships & Support</title>
 
     <script async src="https://plausible.io/js/pa-gq9_yqStULJ33tNHqrCVk.js"></script>
     <script>
@@ -13,11 +12,11 @@
     </script>
 
     <style>
-        /* --- RESET & BASE --- */
+        /* --- General Styling (Consistent with all pages) --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: #F7F5F0; /* Warm Paper */
+            background-color: #F7F5F0;
             color: #1a1a1a;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -25,152 +24,131 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px; /* Tighter for contact focus */
             margin: 0 auto;
             padding: 0 24px;
+            text-align: center;
         }
 
-        /* --- NAVIGATION --- */
-        .top-nav {
-            padding: 24px 0;
-            margin-bottom: 40px;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+        /* --- Navigation & Header --- */
+        .nav-bar {
+            padding: 40px 0 20px;
+            text-align: left;
         }
 
         .back-link {
-            text-decoration: none;
-            color: #3A5A5C;
-            font-weight: 600;
             font-size: 0.9rem;
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
             transition: color 0.2s;
         }
-
+        
         .back-link:hover {
             color: #1a1a1a;
-            text-decoration: underline;
         }
 
-        /* --- HEADER --- */
         header {
             padding: 40px 0 60px;
-            text-align: center;
         }
 
         h1 {
-            font-family: "Georgia", serif;
-            font-size: 3rem;
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 2.8rem;
             font-weight: 400;
             line-height: 1.1;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             color: #1a1a1a;
         }
-        
-        /* --- CONTACT GRID --- */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            padding-bottom: 80px;
-        }
 
-        .contact-item {
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-        }
-
-        .contact-item h3 {
-            font-family: "Georgia", serif;
-            font-size: 1.4rem;
-            color: #3A5A5C; /* Clinical Slate */
-            margin-bottom: 10px;
-        }
-
-        .contact-item p {
-            font-size: 1rem;
+        .intro-p {
+            font-size: 1.2rem;
             color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* --- Contact Blocks --- */
+        .contact-block {
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 1px solid #eee;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+        }
+
+        .contact-block h2 {
+            font-family: "Georgia", serif;
+            font-size: 1.6rem;
+            color: #3A5A5C;
             margin-bottom: 15px;
         }
 
-        .contact-link {
-            display: inline-block;
-            color: #1a1a1a;
-            font-weight: 700;
+        .contact-block p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        a.contact-link {
+            color: #3A5A5C;
             text-decoration: none;
-            border-bottom: 2px solid #D4A373; /* Data Gold highlight */
-            padding-bottom: 2px;
+            font-weight: 600;
             transition: color 0.2s;
         }
 
-        .contact-link:hover {
-            color: #3A5A5C;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #999;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(0,0,0,0.06);
+        a.contact-link:hover {
+            color: #1a1a1a;
         }
         
-        /* Mobile */
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            color: #999;
+            font-size: 0.85rem;
+        }
+
         @media (max-width: 600px) {
             h1 { font-size: 2.2rem; }
-            .contact-grid { grid-template-columns: 1fr; }
+            .intro-p { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <nav class="top-nav">
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
-        </nav>
+    <div class="nav-bar container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
 
+    <div class="container">
         <header>
-            <h1 style="font-size: 3.5rem;">Get in Touch.</h1>
-            <p style="font-size: 1.25rem; color: #555; max-width: 600px; margin: 0 auto;">
-                We are currently focused on strategic partnerships for deployment and scaling the infrastructure.
+            <h1>Contact Us.</h1>
+            <p class="intro-p">
+                We are building the infrastructure for emotional health. Let us know how we can deploy it for your system.
             </p>
         </header>
 
-        <section class="contact-grid">
-            
-            <div class="contact-item">
-                <h3>Sales & Deployment</h3>
-                <p>For NHS, ICS, Enterprise HR, and B2B inquiries regarding capacity shielding and DSI licensing.</p>
-                <a href="mailto:hello@neighbourhoodcolab.co.uk?subject=Deployment%20Inquiry%3A%20Capacity%20Shield" class="contact-link">
-                    hello@neighbourhoodcolab.co.uk
-                </a>
-            </div>
+        <section class="contact-block">
+            <h2>Sales & Partnerships</h2>
+            <p>For white-label deployment, integration, or strategic enquiries.</p>
+            <p style="margin-top: 20px;">
+                Email: <a href="mailto:partnerships@supportplaylists.com" class="contact-link">partnerships@supportplaylists.com</a>
+            </p>
+        </section>
 
-            <div class="contact-item">
-                <h3>Partnerships & VCSE</h3>
-                <p>For integrating resources (e.g., Citizens Advice) or discussing content pathways for the Curated Mix.</p>
-                <a href="mailto:hello@neighbourhoodcolab.co.uk?subject=Partnership%20Inquiry%3A%20VCSE%20Integration" class="contact-link">
-                    hello@neighbourhoodcolab.co.uk
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <h3>Media & General</h3>
-                <p>For press inquiries, speaking engagements, or questions about the Zero-Data Protocol and ethics.</p>
-                <a href="mailto:hello@neighbourhoodcolab.co.uk?subject=Media%20Inquiry" class="contact-link">
-                    hello@neighbourhoodcolab.co.uk
-                </a>
-            </div>
-
+        <section class="contact-block">
+            <h2>General Enquiries</h2>
+            <p>For questions about the Manifesto or Governance Protocol.</p>
+            <p style="margin-top: 20px;">
+                Email: <a href="mailto:info@supportplaylists.com" class="contact-link">info@supportplaylists.com</a>
+            </p>
         </section>
 
         <footer>
             <p>© 2025 Support Playlists. The Infrastructure for Emotional Health.</p>
         </footer>
-
     </div>
-
 </body>
 </html>
