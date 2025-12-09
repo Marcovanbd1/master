@@ -12,7 +12,7 @@
     </script>
 
     <style>
-        /* --- General Styling --- */
+        /* --- General Styling (Consistent with index.html) --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
@@ -88,18 +88,30 @@
             margin-bottom: 16px;
         }
 
+        /* UPDATED: Increased spacing and added subtle divider for structure */
         .section-item {
-            margin-bottom: 30px;
+            margin-bottom: 45px; 
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0,0,0,0.05); 
         }
 
+        /* UPDATED: Metric Headings (Sans-serif, bold, dark) */
         .section-item h3 {
-            font-family: "Georgia", serif;
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin-bottom: 8px;
-            color: #3A5A5C;
+            font-family: -apple-system, sans-serif; 
+            font-size: 1.45rem;
+            font-weight: 700; 
+            margin-bottom: 12px;
+            color: #1a1a1a; 
         }
 
+        /* NEW: Highlight for Key Data Points (Teal, Extra Bold) */
+        .metric-highlight {
+            color: #3A5A5C; 
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-right: 8px;
+        }
+        
         .section-item p {
             color: #555;
             margin-bottom: 8px;
@@ -188,17 +200,17 @@
 
         <section class="section">
             <div class="section-item">
-                <h3>65% Capacity Shielding</h3>
+                <h3><span class="metric-highlight">65%</span> Capacity Shielding</h3>
                 <p>Up to 65% of Primary Care visits have a non-clinical root cause. Our **ANCI** engine resolves this "messy" demand upstream, routing users to community support before they book an appointment.</p>
             </div>
             
             <div class="section-item">
-                <h3>Zero Data Liability</h3>
+                <h3><span class="metric-highlight">Zero</span> Data Liability</h3>
                 <p>We operate on a **Zero-Data, No-Account** architecture. This removes GDPR risk for your organization and eliminates barriers to entry for your population.</p>
             </div>
             
             <div class="section-item">
-                <h3>25p Scalable Unit Cost</h3>
+                <h3><span class="metric-highlight">25p</span> Scalable Unit Cost</h3>
                 <p>Designed as a high-efficiency utility. Our "Switch-On" module integrates with existing portals (HR, NHS App, Smart Triage) for approximately **25p per head** per annum.</p>
             </div>
 
@@ -219,9 +231,7 @@
             </div>
             
             <p class="intro-p" style="margin-bottom: 10px;">Ready to protect your capacity?</p>
-            
             <a href="contact.html" class="cta-btn">Contact Sales & Partnerships</a>
-            
             <a href="technology.html" class="cta-link">Read the Governance & Ethics Protocol →</a>
         </section>
 
