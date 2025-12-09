@@ -3,189 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood | Say how you feel.</title>
+    <title>Mood | Say how you feel. Get a playlist.</title>
+    <meta name="description" content="The easiest path through a hard day. Anonymous, zero-data emotional support built by peers.">
+    
     <style>
-        /* --- GLOBAL STYLES --- */
+        /* --- The Mood Aesthetic: Warm, Minimal, Sophisticated --- */
+        :root {
+            --bg-color: #F7F5F0; /* Soft Warm Paper/Beige */
+            --text-color: #2C2C2C; /* Soft Black */
+            --accent-color: #A37E6D; /* Muted Terracotta */
+            --secondary-text: #5A5A5A;
+            --white: #FFFFFF;
+            --font-serif: "Georgia", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
             margin: 0;
             padding: 0;
-            background-color: #f7f7f5; /* Master neutral background */
-            color: #1a1a1a;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 600px; /* Narrower focus for the consumer app feel */
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 40px;
-            flex: 1;
-        }
-
-        /* --- NAVIGATION --- */
-        nav {
-            text-align: left;
-            margin-bottom: 60px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #888;
-            font-size: 0.9em;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #1a1a1a;
-        }
-
-        /* --- MOOD BRANDING --- */
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 3.5em;
-            color: #c07a5d; /* Terracotta / Warm Mood Brand Color */
-            margin-bottom: 10px;
-            margin-top: 0;
-        }
-
-        .sub-head {
-            font-size: 1.4em;
-            color: #555;
-            margin-bottom: 50px;
-            font-weight: 300;
-        }
-
-        /* --- THE INPUT SIMULATION --- */
-        .input-box {
-            background-color: #ffffff;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: left;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: border-color 0.3s;
-        }
-
-        .input-box:hover {
-            border-color: #c07a5d;
-        }
-
-        .input-label {
-            display: block;
-            font-size: 0.9em;
-            color: #888;
-            margin-bottom: 10px;
-        }
-
-        .fake-input {
-            font-size: 1.2em;
-            color: #aaa;
-            font-style: italic;
-        }
-
-        .action-button {
-            display: block;
-            width: 100%;
-            background-color: #5d7c68; /* Sage Green / Calming Action */
-            color: white;
-            padding: 18px 0;
-            border-radius: 8px;
-            font-size: 1.2em;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            margin-bottom: 20px;
-        }
-
-        .action-button:hover {
-            background-color: #4a6352;
-        }
-
-        /* --- ZERO DATA GUARANTEE --- */
-        .trust-badge {
-            font-size: 0.85em;
-            color: #888;
-            letter-spacing: 0.5px;
-            margin-bottom: 60px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 40px;
-        }
-
-        /* --- DIVE DEEPER / MARKETPLACE --- */
-        .marketplace-section {
-            text-align: left;
-            margin-bottom: 60px;
-        }
-
-        .marketplace-section h3 {
-            font-family: Georgia, serif;
-            font-size: 1.5em;
-            color: #1a1a1a;
-        }
-
-        .marketplace-section p {
-            color: #555;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .marketplace-link {
-            color: #c07a5d;
-            font-weight: bold;
+        /* --- Header --- */
+        header {
+            text-align: center;
+            padding: 40px 20px 10px;
+        }
+
+        .brand-name {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 400;
+            margin: 10px 0 20px;
+            color: var(--text-color);
+            letter-spacing: -0.02em;
+        }
+
+        .sub-hero {
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
+
+        /* --- The Live App Embed (Center Stage) --- */
+        .app-container {
+            width: 100%;
+            max-width: 700px; /* Optimal reading width */
+            margin: 0 auto;
+            background: transparent;
+            /* No visible border for seamless integration */
+        }
+
+        /* --- Trust & Value Section --- */
+        .trust-section {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .trust-item h3 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .trust-item p {
+            font-size: 0.95rem;
+            color: var(--secondary-text);
+        }
+
+        /* --- Curated Mix / Dive Deeper Section --- */
+        .dive-deeper {
+            background-color: #EFEBE4; /* Slightly darker shade for separation */
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .dive-deeper h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .dive-deeper p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--secondary-text);
+        }
+
+        .btn-text-link {
+            display: inline-block;
             text-decoration: none;
+            color: var(--text-color);
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 2px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-text-link:hover {
+            color: var(--accent-color);
         }
 
-        /* --- FOOTER --- */
+        /* --- Zero Data Footer --- */
         footer {
-            font-size: 0.8em;
-            color: #999;
-            padding: 20px 0;
-            margin-top: auto;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .zero-data-badge {
+            display: inline-block;
+            border: 1px solid #ddd;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        /* --- Mobile Tweaks --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .app-container { padding: 0 10px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <nav>
-            <a href="index.html">← Back to Manifesto</a>
-        </nav>
+    <header>
+        <span class="brand-name">Mood by Support Playlists</span>
+        <h1>Say how you feel.<br>Get a playlist.</h1>
+        <p class="sub-hero">
+            The easiest path through a hard day. <br>
+            Silent. Anonymous. Human.
+        </p>
+    </header>
 
-        <h1>Mood.</h1>
-        <p class="sub-head">Say how you feel. Get a playlist.</p>
-
-        <div class="input-box">
-            <span class="input-label">What's on your mind?</span>
-            <span class="fake-input">Stress, sleep, or just a rubbish day...</span>
+    <main>
+        <div class="app-container">
+            <iframe 
+                src="https://supportplaylists.replit.app/app" 
+                width="100%" 
+                height="600" 
+                style="border: none; display: block;"
+                title="Support Playlists Utility"
+                loading="lazy"
+                allow="clipboard-write"
+            ></iframe>
         </div>
+    </main>
 
-        <a href="#" class="action-button">Show me my playlist</a>
-        
-        <div class="trust-badge">
-            SILENT. ANONYMOUS. ZERO DATA. NO ACCOUNT.
+    <section class="trust-section">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h3>⚡️ Immediate Relief</h3>
+                <p>No login. No waiting lists. Just type how you feel and get a structured path instantly.</p>
+            </div>
+            <div class="trust-item">
+                <h3>🤫 Zero Data</h3>
+                <p>We don't want your data. No accounts, no tracking cookies. Nothing is ever saved.</p>
+            </div>
+            <div class="trust-item">
+                <h3>🫂 Built by Peers</h3>
+                <p>Not clinical diagnosis—just actionable steps built by people who have been there.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="marketplace-section">
-            <h3>The easiest path through a hard day.</h3>
-            <p>We normalize the spectrum of distress. Whether you are battling acute anxiety or just having a <strong>"rubbish day,"</strong> our system translates your messy thoughts into a structured path you can walk right now.</p>
-            <p>Welcome to the community. We call ourselves <strong>Playlisters</strong>.</p>
-        </div>
+    <section class="dive-deeper">
+        <h2>Ready to dive deeper?</h2>
+        <p>
+            We believe the best support comes from a curated mix. 
+            If you need more than a playlist, explore our trusted list of community, digital, and professional resources.
+        </p>
+        <a href="#curated-mix" class="btn-text-link">Explore the Curated Mix &rarr;</a>
+    </section>
 
-        <div class="marketplace-section">
-            <h3>Need a little more?</h3>
-            <p>If your playlist shows you need extra support, you can opt-in to view our <strong>Curated Mix</strong> of community, digital, and professional resources.</p>
-            <p><a href="#" class="marketplace-link">Dive Deeper into the Mix →</a></p>
-        </div>
-
-        <footer>
-            <p>Mood is free. Forever.</p>
-            <p>Powered by Support Playlists Infrastructure.</p>
-        </footer>
-    </div>
+    <footer>
+        <div class="zero-data-badge">🔒 Zero-Data Architecture</div>
+        <p>
+            Mood is an autonomous utility for emotional support.<br>
+            © 2024 Support Playlists. All rights reserved.
+        </p>
+    </footer>
 
 </body>
 </html>
