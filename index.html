@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Playlists</title>
+    <title>Support Playlists | The Missing Infrastructure</title>
+
+    <script async src="https://plausible.io/js/pa-gq9_yqStULJ33tNHqrCVk.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
 
     <style>
         /* --- RESET & BASE --- */
@@ -25,8 +31,9 @@
 
         /* --- HERO SECTION --- */
         header {
+            /* DESKTOP GAP: 130px (Balanced) */
+            padding: 130px 0 60px; 
             text-align: center;
-            /* Note: We are using inline styles in the HTML body to force the gap now */
         }
 
         .logo {
@@ -64,7 +71,8 @@
             flex-direction: column;
             align-items: center;
             gap: 16px;
-            margin-bottom: 40px; /* TIGHTENED GAP to pull sections higher */
+            /* Keeps the features close to the buttons */
+            margin-bottom: 50px; 
         }
 
         .btn {
@@ -102,7 +110,7 @@
 
         /* --- FEATURES GRID --- */
         .features {
-            padding: 60px 0; /* Reduced padding here too */
+            padding: 80px 0;
             border-top: 1px solid rgba(0,0,0,0.06);
         }
 
@@ -161,14 +169,14 @@
             .container { padding: 0 20px; }
             .grid { gap: 40px; }
             
-            /* If the screen is small, we still want a gap, just slightly smaller */
-            /* The inline style on the header will override this, but that is fine for your test */
+            /* MOBILE GAP: 80px (Stays compact on phones) */
+            header { padding: 80px 0 40px; }
         }
     </style>
 </head>
 <body>
 
-    <header class="container" style="padding-top: 180px; padding-bottom: 60px;">
+    <header class="container">
         <span class="logo">Support Playlists</span>
         <h1>The Missing Infrastructure for Human Distress.</h1>
         <p class="sub-hero">
