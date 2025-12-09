@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood | Say how you feel. Get a playlist.</title>
-    <meta name="description" content="The easiest path through a hard day. Anonymous, zero-data emotional support built by peers.">
-    
+    <title>Mood | The Consumer Lab</title>
+
     <script async src="https://plausible.io/js/pa-gq9_yqStULJ33tNHqrCVk.js"></script>
     <script>
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
@@ -17,194 +16,219 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: #F7F5F0; /* Warm Paper */
-            color: #1a1a1a; /* Sharp Black */
+            background-color: #F7F5F0;
+            color: #1a1a1a;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px; 
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* --- NAVIGATION (Back Button) --- */
-        .top-nav {
-            padding: 24px 0;
-            margin-bottom: 20px;
+        /* --- NAVIGATION --- */
+        .nav-bar {
+            padding: 40px 0 20px;
         }
 
         .back-link {
-            text-decoration: none;
-            color: #555;
-            font-weight: 600;
             font-size: 0.9rem;
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
             transition: color 0.2s;
         }
 
         .back-link:hover {
-            color: #3A5A5C;
+            color: #1a1a1a;
         }
 
-        /* --- HERO --- */
+        /* --- HERO SECTION --- */
         header {
             text-align: center;
-            padding-bottom: 40px;
+            padding: 40px 0 40px;
         }
 
-        .brand-name {
-            font-weight: 700;
-            letter-spacing: 0.12em;
+        .eyebrow {
+            font-size: 0.7rem;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            color: #A37E6D; /* Muted Terracotta for Consumer Side */
+            letter-spacing: 0.15em;
+            color: #888;
+            font-weight: 700;
             margin-bottom: 16px;
             display: block;
         }
 
+        .logo {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #3A5A5C;
+            display: block;
+            margin-bottom: 16px;
+        }
+
         h1 {
-            font-family: "Georgia", serif;
+            font-family: "Georgia", "Times New Roman", serif;
             font-size: 2.8rem;
             font-weight: 400;
-            margin-bottom: 20px;
-            color: #1a1a1a;
             line-height: 1.1;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
         }
 
         .sub-hero {
             font-size: 1.2rem;
             color: #555;
-            max-width: 500px;
-            margin: 0 auto;
-            font-weight: 400;
+            margin-bottom: 8px;
         }
 
-        /* --- THE APP (Centered & Framed) --- */
-        .app-wrapper {
-            width: 100%;
-            max-width: 700px;
-            margin: 0 auto 60px;
+        .tagline {
+            font-size: 0.95rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* --- INTERFACE SIMULATION (The functional Iframe) --- */
+        .app-interface {
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Subtle lift */
-            overflow: hidden; /* Clips the iframe corners */
+            border-radius: 16px;
+            padding: 10px; /* Reduced padding to give more space to the iframe */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin: 40px 0;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+            /* Important: Ensures the iframe itself is displayed correctly */
+            overflow: hidden; 
         }
-
+        
         iframe {
             display: block;
             width: 100%;
-            height: 650px; /* Tall enough for the content */
+            /* You may need to adjust this height based on the size of your app inside Replit */
+            height: 500px; 
             border: none;
+            background: #F7F5F0; /* Blend background if Replit app is transparent */
         }
 
-        /* --- TRUST GRID --- */
-        .trust-section {
-            padding: 60px 0;
-            border-top: 1px solid rgba(0,0,0,0.06);
-        }
 
-        .trust-grid {
+        /* --- BENEFITS GRID --- */
+        .benefits {
+            padding: 20px 0 60px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .benefit-item {
+            margin-bottom: 20px;
             text-align: center;
         }
 
-        .trust-item h3 {
-            font-family: "Georgia", serif;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+        .emoji {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .benefit-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
             color: #1a1a1a;
         }
 
-        .trust-item p {
+        .benefit-item p {
             font-size: 0.95rem;
             color: #666;
             line-height: 1.5;
+            max-width: 90%;
+            margin: 0 auto;
         }
 
         /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 40px 20px;
-            font-size: 0.85rem;
-            color: #999;
             border-top: 1px solid rgba(0,0,0,0.06);
+            color: #999;
+            font-size: 0.8rem;
         }
 
-        .badge {
-            display: inline-block;
-            border: 1px solid #e0e0e0;
-            padding: 6px 16px;
-            border-radius: 20px;
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             margin-bottom: 16px;
-            font-weight: 500;
-            color: #666;
-            font-size: 0.8rem;
-            background: white;
+            color: #3A5A5C;
+            font-weight: 600;
+            font-size: 0.85rem;
         }
-        
-        /* Mobile Adjustments */
+
         @media (max-width: 600px) {
             h1 { font-size: 2.2rem; }
-            .app-wrapper { border-radius: 0; box-shadow: none; background: transparent; }
-            iframe { height: 600px; }
+            .container { padding: 0 20px; }
+            .benefits { 
+                grid-template-columns: 1fr; 
+                padding-bottom: 40px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <nav class="top-nav">
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
-        </nav>
-
-        <header>
-            <span class="brand-name">Mood by Support Playlists</span>
-            <h1>Say how you feel.<br>Get a playlist.</h1>
-            <p class="sub-hero">
-                The easiest path through a hard day. <br>
-                Silent. Anonymous. Human.
-            </p>
-        </header>
+    <div class="nav-bar container">
+        <a href="index.html" class="back-link">← Back to Home</a>
     </div>
 
-    <main class="app-wrapper">
-        <iframe 
-            src="https://supportplaylists.replit.app/app" 
-            title="Support Playlists Utility"
-            loading="lazy"
-            allow="clipboard-write"
-        ></iframe>
-    </main>
+    <header class="container">
+        <span class="eyebrow">The Consumer Lab</span>
+        <span class="logo">Mood by Support Playlists</span>
+        
+        <h1>Say how you feel.<br>Get a playlist.</h1>
+        <p class="sub-hero">The easiest path through a hard day.</p>
+        <p class="tagline">Silent. Anonymous. Human.</p>
 
-    <div class="container">
-        <section class="trust-section">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <h3>⚡️ Immediate Relief</h3>
-                    <p>No login. No waiting lists. Just type how you feel and get a structured path.</p>
-                </div>
-                <div class="trust-item">
-                    <h3>🤫 Zero Data</h3>
-                    <p>We don't want your data. No accounts, no tracking. Nothing is ever saved.</p>
-                </div>
-                <div class="trust-item">
-                    <h3>🫂 Built by Peers</h3>
-                    <p>Not clinical diagnosis—just actionable steps built by people who have been there.</p>
-                </div>
-            </div>
-        </section>
-    </div>
+        <div class="app-interface">
+            <iframe 
+                src="https://supportplaylists.replit.app" 
+                title="Mood Playlist Generator (Working Demo)">
+            </iframe>
+        </div>
+    </header>
+
+    <section class="container benefits">
+        
+        <div class="benefit-item">
+            <span class="emoji">⚡️</span>
+            <h3>Immediate Relief</h3>
+            <p>No login. No waiting lists. Just type how you feel and get a structured path.</p>
+        </div>
+
+        <div class="benefit-item">
+            <span class="emoji">🤫</span>
+            <h3>Zero Data</h3>
+            <p>We don't want your data. No accounts, no tracking. Nothing is ever saved.</p>
+        </div>
+
+        <div class="benefit-item">
+            <span class="emoji">🫂</span>
+            <h3>Built by Peers</h3>
+            <p>Not clinical diagnosis—just actionable steps built by people who have been there.</p>
+        </div>
+
+    </section>
 
     <footer>
-        <div class="badge">🔒 Zero-Data Architecture</div>
-        <p>
-            Mood is an autonomous utility for emotional support.<br>
-            © 2025 Support Playlists. All rights reserved.
-        </p>
+        <div class="secure-badge">
+            <span>🔒</span> Zero-Data Architecture
+        </div>
+        <p>Mood is an autonomous utility for emotional support.</p>
+        <br>
+        <p>© 2025 Support Playlists. All rights reserved.</p>
     </footer>
 
 </body>
